@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #FAFAFA;
+  --color-foreground: #000000;
+  --color-accent: #3B82F6;
+  --color-accent-muted: #60A5FA;
+  --color-muted: #F4F4F5;
+  --color-muted-foreground: #71717A;
+
+  --font-sans: "Inter", "sans-serif";
+
+  --shadow-premium: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-premium-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+
+  --color-glass: rgba(255, 255, 255, 0.7);
+  --color-glass-border: rgba(255, 255, 255, 0.2);
+  --shadow-inner-glow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Tailwind dark mode via class */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #000000;
+  background-color: #FAFAFA;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark {
+  color-scheme: dark;
+  color: #FAFAFA;
+  background-color: #0A0A0A;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-background, #FAFAFA);
+  color: var(--color-foreground, #000000);
+  scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  background-color: #0A0A0A;
+  color: #FAFAFA;
+}
+
+
+@layer base {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+.container-custom {
+  @apply max-w-[1200px] mx-auto px-6 sm:px-12;
+}
