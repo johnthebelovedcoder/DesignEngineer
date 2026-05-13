@@ -71,10 +71,11 @@ export const Navbar = () => {
                         </button>
                     ))}
                     <a
-                        href="mailto:timilehinoripeloye@gmail.com?subject=Resume%20Request%20-%20Timilehin%20Oripeloye"
+                        href={`${import.meta.env.BASE_URL}Timilehin_Oripeloye_Design_Engineer_CV.pdf`}
+                        download
                         className="text-sm font-semibold text-white bg-black dark:bg-white dark:text-black px-4 py-2 rounded-full hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
                     >
-                        Request Resume (PDF)
+                        Download CV
                     </a>
                 </div>
 
@@ -123,10 +124,11 @@ export const Navbar = () => {
                             </button>
                         ))}
                         <a
-                            href="mailto:timilehinoripeloye@gmail.com?subject=Resume%20Request%20-%20Timilehin%20Oripeloye"
+                            href={`${import.meta.env.BASE_URL}Timilehin_Oripeloye_Design_Engineer_CV.pdf`}
+                            download
                             className="text-base font-semibold text-center text-white bg-black dark:bg-white dark:text-black px-4 py-3 rounded-full hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors mt-2"
                         >
-                            Request Resume (PDF)
+                            Download CV
                         </a>
                     </div>
                 </div>
